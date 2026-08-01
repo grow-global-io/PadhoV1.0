@@ -7,48 +7,7 @@
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/png" href="../logo.png">
   <style>
-    .page-hero-section {
-      padding: 120px 0 60px 0;
-      background: var(--bg-light);
-      border-bottom: 3px solid #000;
-      text-align: center;
-    }
-    .page-hero-tag {
-      display: inline-block;
-      background: var(--primary-yellow);
-      color: #000;
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 0.85rem;
-      padding: 4px 16px;
-      border: 2px solid #000;
-      border-radius: 50px;
-      box-shadow: 3px 3px 0px #000;
-      margin-bottom: 16px;
-      text-transform: uppercase;
-    }
-    .page-hero-title {
-      font-family: var(--font-heading);
-      font-size: 3rem;
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 16px;
-      color: var(--text-dark);
-    }
-    .page-hero-desc {
-      font-size: 1.2rem;
-      font-weight: 500;
-      color: rgba(0, 0, 0, 0.75);
-      max-width: 720px;
-      margin: 0 auto 32px auto;
-      line-height: 1.6;
-    }
-    .page-hero-actions {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+    /* Styling adjustments for page-specific grids */
     .feature-detail-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -57,7 +16,6 @@
     }
     @media (max-width: 768px) {
       .feature-detail-grid { grid-template-columns: 1fr; }
-      .page-hero-title { font-size: 2.2rem; }
     }
     .detail-card {
       background: #fff;
@@ -134,10 +92,6 @@
 </head>
 <body>
 
-  <!-- Navigation Header -->
-  
-  <!-- MAIN NAVIGATION -->
-  
   <!-- MAIN NAVIGATION -->
   <header id="main-header">
     <nav class="nav-container">
@@ -338,28 +292,144 @@
   </header>
 
   <!-- Mobile Drawer -->
-  
+  <aside class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a href="../index.html" class="nav-logo">
+        <img src="../logo.png" alt="Padho Logo" class="nav-logo-img">
+      </a>
+      <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Close Menu">✕</button>
+    </div>
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav">
+        <li><a href="../index.html" class="mobile-nav-link">Home</a></li>
+
+        <li class="mobile-has-sub">
+          <button class="mobile-nav-link mobile-nav-toggle">
+            Features <span class="mobile-chevron">▾</span>
+          </button>
+          <ul class="mobile-sub">
+            <li><a href="student-management.html">Student Management</a></li>
+            <li><a href="teacher-management.html">Teacher Management</a></li>
+            <li><a href="batch-management.html">Batch Management</a></li>
+            <li><a href="course-management.html">Course Management</a></li>
+            <li><a href="online-examination.html">Online Examination</a></li>
+            <li><a href="attendance-management.html">Attendance Management</a></li>
+            <li><a href="parent-portal.html">Parent Portal</a></li>
+            <li><a href="finance-management.html">Finance & Fee Management</a></li>
+            <li><a href="analytics-reports.html">Analytics & Reports</a></li>
+            <li><a href="mobile-app.html">Mobile App</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-has-sub">
+          <button class="mobile-nav-link mobile-nav-toggle">
+            Solutions <span class="mobile-chevron">▾</span>
+          </button>
+          <ul class="mobile-sub">
+            <li><a href="coaching-institutes.html">Coaching Institutes</a></li>
+            <li><a href="schools.html">Schools</a></li>
+            <li><a href="colleges.html">Colleges</a></li>
+            <li><a href="tuition-centers.html">Tuition Centers</a></li>
+            <li><a href="training-institutes.html">Training Institutes</a></li>
+            <li><a href="corporate-training.html">Corporate Training</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-has-sub">
+          <button class="mobile-nav-link mobile-nav-toggle">
+            Modules <span class="mobile-chevron">▾</span>
+          </button>
+          <ul class="mobile-sub">
+            <li><a href="student-management.html">Academic Management</a></li>
+            <li><a href="course-management.html">Learning Management</a></li>
+            <li><a href="online-examination.html">Examination System</a></li>
+            <li><a href="attendance-management.html">Attendance</a></li>
+            <li><a href="finance-management.html">Finance</a></li>
+            <li><a href="communication.html">Communication</a></li>
+            <li><a href="analytics-reports.html">Analytics</a></li>
+          </ul>
+        </li>
+
+        <li><a href="https://adhyayan.gll.one/auth" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">Pricing</a></li>
+
+        <li class="mobile-has-sub">
+          <button class="mobile-nav-link mobile-nav-toggle">
+            Demo <span class="mobile-chevron">▾</span>
+          </button>
+          <ul class="mobile-sub">
+            <li><a href="https://calendar.app.google/VQ18n3Bwirs8ux3M8" target="_blank" rel="noopener noreferrer">Book Live Demo</a></li>
+            <li><a href="coaching-institutes.html">Product Walkthrough</a></li>
+            <li><a href="coaching-institutes.html">Demo Videos</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-has-sub">
+          <button class="mobile-nav-link mobile-nav-toggle">
+            Resources <span class="mobile-chevron">▾</span>
+          </button>
+          <ul class="mobile-sub">
+            <li><a href="../index.html#blog">Blog</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="success-stories.html">Success Stories</a></li>
+            <li><a href="video-tutorials.html">Video Tutorials</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-has-sub">
+          <button class="mobile-nav-link mobile-nav-toggle">
+            About<span class="mobile-chevron">▾</span>
+          </button>
+          <ul class="mobile-sub">
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="mission-vision.html">Mission & Vision</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="https://wa.me/919144191440?text=Hi%20Padho!%20I%20want%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="mobile-drawer-actions">
+        <a href="https://adhyayan.gll.one/auth" target="_blank" rel="noopener noreferrer" class="mobile-login-btn">Login</a>
+        <a href="https://adhyayan.gll.one/auth" target="_blank" rel="noopener noreferrer" class="mobile-cta-btn">Start Free Trial</a>
+      </div>
+    </div>
+  </aside>
 
   <!-- Mobile Overlay -->
-  
+  <div class="mobile-overlay" id="mobile-overlay"></div>
 
+  <!-- Hero Section (Matches home page hero) -->
+  <section class="hero-section grid-overlay" style="padding: 160px 0 100px 0;">
+    <!-- SVGs Sparkles and Doodles -->
+    <svg class="doodle-sparkle-1" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor"></path>
+    </svg>
+    <svg class="doodle-sparkle-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor"></path>
+    </svg>
+    <svg class="doodle-loop-1" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 25C10 15 20 10 30 15C40 20 42 35 30 40C18 45 8 30 15 20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"></path>
+    </svg>
 
-  <!-- Mobile Drawer -->
-  
+    <div class="container hero-content">
+      <div class="trust-badge-group">
+        <span class="trust-text" style="text-transform: uppercase; letter-spacing: 0.1em;">About</span>
+      </div>
 
-  <!-- Mobile Overlay -->
-  
+      <h1 class="hero-title" style="font-size: 3.8rem; margin-bottom: 24px; line-height: 1.1;">
+        <span>Careers</span>
+      </h1>
 
+      <p style="font-size: 1.3rem; font-weight: 600; max-width: 720px; margin: 0 auto 40px auto; line-height: 1.6; color: #000;">
+        Help us build secure, autonomous web tools for thousands of educators. Explore open roles.
+      </p>
 
-  <!-- Hero Section -->
-  <section class="page-hero-section">
-    <div class="container">
-      <span class="page-hero-tag">About</span>
-      <h1 class="page-hero-title">Careers</h1>
-      <p class="page-hero-desc">Help us build secure, autonomous web tools for thousands of educators. Explore open roles.</p>
-      <div class="page-hero-actions">
+      <div class="hero-actions" style="margin-bottom: 0;">
         <a href="https://adhyayan.gll.one/auth" target="_blank" rel="noopener noreferrer" class="nb-button nb-button-dark">Start Free Trial &rarr;</a>
-        <a href="https://wa.me/919144191440?text=Hi%20Padho!%20I%20want%20to%20know%20more%20about%20Careers." target="_blank" rel="noopener noreferrer" class="nb-button nb-button-green">💬 Chat on WhatsApp</a>
+        <a href="https://wa.me/919144191440?text=Hi%20Padho!%20I%20want%20to%20know%20more%20about%20Careers." target="_blank" rel="noopener noreferrer" class="nb-button nb-button-white" style="background:#25D366; color:#fff; border-color:#000;">💬 Chat on WhatsApp</a>
       </div>
     </div>
   </section>
@@ -379,25 +449,25 @@
           <h3 class="detail-card-title">Open Engineering Roles</h3>
           <p class="detail-card-text">Looking for specialists in Next.js, Web Push, and cloud architecture.</p>
         </div>
-        
+  
         <div class="detail-card">
           <div class="detail-card-icon">🛡️</div>
           <h3 class="detail-card-title">Security Experts</h3>
           <p class="detail-card-text">Join our team focused on DRM, sandboxing, and video decryption safety.</p>
         </div>
-        
+  
         <div class="detail-card">
           <div class="detail-card-icon">🌟</div>
           <h3 class="detail-card-title">Customer Success Managers</h3>
           <p class="detail-card-text">Help offline institutes transition online with personalized guidance.</p>
         </div>
-        
+  
         <div class="detail-card">
           <div class="detail-card-icon">🎨</div>
           <h3 class="detail-card-title">Graphic Designers</h3>
           <p class="detail-card-text">Design custom white-label templates for client brands.</p>
         </div>
-        
+  
       </div>
     </div>
   </section>
