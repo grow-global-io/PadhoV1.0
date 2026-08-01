@@ -2342,6 +2342,11 @@ body {
   }
   .section-title {
     font-size: 2rem;
+    line-height: 1.4 !important;
+  }
+  .section-title span {
+    display: inline-block;
+    margin-top: 6px;
   }
   .intro-text {
     font-size: 1.4rem;
@@ -2383,6 +2388,19 @@ body {
   .video-container {
     box-shadow: 4px 4px 0px #000 !important;
   }
+  /* Blog list mobile optimizations */
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .blog-card-meta {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .blog-card {
+    padding: 24px;
+    min-height: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2394,6 +2412,7 @@ body {
   }
   .section-title {
     font-size: 1.65rem;
+    line-height: 1.45 !important;
   }
   .nb-button {
     width: 100%;
