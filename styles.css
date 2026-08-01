@@ -2335,16 +2335,16 @@ body {
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 8vw, 3rem);
   }
   .hero-subtitle {
     font-size: 1.25rem;
   }
   .section-title {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .intro-text {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .footer-nav {
     grid-template-columns: repeat(2, 1fr);
@@ -2352,11 +2352,59 @@ body {
   .footer-info {
     flex-direction: column;
     text-align: center;
+    gap: 12px;
   }
   .stack-stats {
     grid-template-columns: 1fr;
   }
   .stat-item-full {
     grid-column: span 1;
+  }
+  /* Scale down 3D stack columns visual and hide horizontal connector lines */
+  .pillar-visual-container {
+    transform: scale(0.85);
+    margin-bottom: -40px;
+    height: 380px;
+  }
+  .pointer-line {
+    display: none !important;
+  }
+  .pillar-label-item {
+    gap: 0;
+  }
+  /* Testimonial slider optimizations */
+  .testimonial-card {
+    padding: 24px 20px;
+  }
+  .testimonial-quote {
+    font-size: 1.1rem;
+  }
+  /* Video container shadow fix */
+  .video-container {
+    box-shadow: 4px 4px 0px #000 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.85rem !important;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .section-title {
+    font-size: 1.65rem;
+  }
+  .nb-button {
+    width: 100%;
+    padding: 12px 20px;
+  }
+  .hero-actions {
+    gap: 12px;
+  }
+  .pillar-visual-container {
+    transform: scale(0.75);
+    margin-bottom: -80px;
+    height: 340px;
   }
 }
