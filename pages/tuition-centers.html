@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padho | Tuition Centers</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../logo.png">
+  <style>
+    .page-hero-section {
+      padding: 120px 0 60px 0;
+      background: var(--bg-light);
+      border-bottom: 3px solid #000;
+      text-align: center;
+    }
+    .page-hero-tag {
+      display: inline-block;
+      background: var(--primary-yellow);
+      color: #000;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 4px 16px;
+      border: 2px solid #000;
+      border-radius: 50px;
+      box-shadow: 3px 3px 0px #000;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .page-hero-title {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: var(--text-dark);
+    }
+    .page-hero-desc {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.75);
+      max-width: 720px;
+      margin: 0 auto 32px auto;
+      line-height: 1.6;
+    }
+    .page-hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .feature-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 50px;
+    }
+    @media (max-width: 768px) {
+      .feature-detail-grid { grid-template-columns: 1fr; }
+      .page-hero-title { font-size: 2.2rem; }
+    }
+    .detail-card {
+      background: #fff;
+      border: 3px solid #000;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 6px 6px 0px #000;
+      transition: transform 0.25s ease;
+    }
+    .detail-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 8px 8px 0px #000;
+    }
+    .detail-card-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--primary-yellow);
+      border: 2px solid #000;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      box-shadow: 3px 3px 0px #000;
+    }
+    .detail-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .detail-card-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #444;
+      font-weight: 500;
+    }
+    .workflow-section {
+      padding: 80px 0;
+      background: #fff;
+      border-bottom: 3px solid #000;
+    }
+    .workflow-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      .workflow-steps { grid-template-columns: 1fr; }
+    }
+    .step-box {
+      border: 3px solid #000;
+      border-radius: 16px;
+      padding: 24px;
+      background: var(--bg-light);
+      box-shadow: 5px 5px 0px #000;
+      position: relative;
+    }
+    .step-num {
+      position: absolute;
+      top: -16px;
+      left: 20px;
+      background: #000;
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header id="main-header" class="scrolled">
+    <nav class="nav-container">
+      <a href="../index.html" class="nav-logo" id="nav-logo">
+        <img src="../logo.png" alt="Padho Logo" class="nav-logo-img">
+      </a>
+      <div class="nav-actions" id="nav-actions">
+        <a href="https://adhyayan.gll.one/auth" target="_blank" rel="noopener noreferrer" class="nav-login-btn">Login</a>
+        <a href="https://adhyayan.gll.one/auth" target="_blank" rel="noopener noreferrer" class="nav-cta-btn">Start Free Trial</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="page-hero-section">
+    <div class="container">
+      <span class="page-hero-tag">Solutions</span>
+      <h1 class="page-hero-title">Tuition Centers</h1>
+      <p class="page-hero-desc">Grow student base and manage after-school groups with automated schedules and payment alerts.</p>
+      <div class="page-hero-actions">
+        <a href="https://adhyayan.gll.one/auth" target="_blank" rel="noopener noreferrer" class="nb-button nb-button-dark">Start Free Trial &rarr;</a>
+        <a href="https://wa.me/919144191440?text=Hi%20Padho!%20I%20want%20to%20know%20more%20about%20Tuition%20Centers." target="_blank" rel="noopener noreferrer" class="nb-button nb-button-green">💬 Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Capabilities Grid -->
+  <section style="padding: 80px 0; background: var(--bg-light);">
+    <div class="container">
+      <div class="section-header" style="text-align: center;">
+        <span class="section-tag">Key Insights</span>
+        <h2 class="section-title">Designed for Success</h2>
+      </div>
+
+      <div class="feature-detail-grid">
+        
+        <div class="detail-card">
+          <div class="detail-card-icon">📖</div>
+          <h3 class="detail-card-title">Group Schedules</h3>
+          <p class="detail-card-text">Easily track multi-grade tuition timetables and batch allocations.</p>
+        </div>
+        
+        <div class="detail-card">
+          <div class="detail-card-icon">⚡</div>
+          <h3 class="detail-card-title">WhatsApp Reminders</h3>
+          <p class="detail-card-text">Automatically trigger late fee notices and monthly invoice details.</p>
+        </div>
+        
+        <div class="detail-card">
+          <div class="detail-card-icon">🏆</div>
+          <h3 class="detail-card-title">Student Rank Mocks</h3>
+          <p class="detail-card-text">Test student skills regularly and share results instantly with parents.</p>
+        </div>
+        
+        <div class="detail-card">
+          <div class="detail-card-icon">📱</div>
+          <h3 class="detail-card-title">100% Mobile Responsive</h3>
+          <p class="detail-card-text">Students practice mocks and read e-books smoothly from any smartphone web browser.</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow Breakdown -->
+  <section class="workflow-section">
+    <div class="container">
+      <div class="section-header" style="text-align: center;">
+        <span class="section-tag">Simple 3-Step Setup</span>
+        <h2 class="section-title">How It Works</h2>
+      </div>
+      <div class="workflow-steps">
+        <div class="step-box">
+          <span class="step-num">STEP 01</span>
+          <h4 style="font-family:var(--font-heading); font-size:1.2rem; margin: 12px 0 8px 0;">Configure System</h4>
+          <p style="font-size:0.9rem; color:#555; margin:0;">Set up your parameters and customization rules in under 2 minutes from your dashboard.</p>
+        </div>
+        <div class="step-box">
+          <span class="step-num">STEP 02</span>
+          <h4 style="font-family:var(--font-heading); font-size:1.2rem; margin: 12px 0 8px 0;">Automate & Share</h4>
+          <p style="font-size:0.9rem; color:#555; margin:0;">Publish updates directly to your web platform for instant access by teachers & students.</p>
+        </div>
+        <div class="step-box">
+          <span class="step-num">STEP 03</span>
+          <h4 style="font-family:var(--font-heading); font-size:1.2rem; margin: 12px 0 8px 0;">Track Analytics</h4>
+          <p style="font-size:0.9rem; color:#555; margin:0;">Monitor real-time engagement and growth metrics with visual dashboards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pre-footer CTA banner -->
+  <section class="pre-footer-cta">
+    <div class="container">
+      <h2>Modernize Your Institution Today</h2>
+      <p>Transform your coaching brand with Padho's all-in-one web platform.</p>
+      <a href="https://adhyayan.gll.one/auth" target="_blank" rel="noopener noreferrer" class="nb-button nb-button-white">Get Started Now</a>
+    </div>
+  </section>
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-info">
+        <address class="footer-address">
+          <strong>© 2026 Padho. All rights reserved.</strong><br>
+          Address: UCP- 004, Bengal Ambuja, City Center, Durgapur, West Bengal, 713216<br>
+          Ph. No: +91 9144191440
+        </address>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Chatbot Widget -->
+  <div class="whatsapp-chatbot-widget" id="whatsapp-chatbot-widget">
+    <div class="wa-chatbot-popup" id="wa-chatbot-popup">
+      <button class="wa-chatbot-close" id="wa-chatbot-close" aria-label="Close Chatbot Callout">&times;</button>
+      <div class="wa-chatbot-header">
+        <span class="wa-sparkle-icon">✨</span>
+        <span class="wa-title-text">Have questions about Padho?</span>
+      </div>
+      <p class="wa-subtitle-text">Chat with our team directly on WhatsApp for instant assistance!</p>
+      <a href="https://wa.me/919144191440?text=Hi%20Padho!%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer" class="wa-chat-start-btn">
+        💬 Ask Padho Bot
+      </a>
+      <div class="wa-chatbot-pointer"></div>
+    </div>
+    <a href="https://wa.me/919144191440?text=Hi%20Padho!%20I%20have%20a%20question." target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Chat on WhatsApp">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="#FFFFFF">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.572-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </a>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
