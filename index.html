@@ -167,7 +167,7 @@
             <svg class="nav-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <div class="dropdown-panel" id="menu-resources">
-            <a href="#blog" class="dropdown-link">✍️ Blog</a>
+            <a href="pages/blog.html" class="dropdown-link">✍️ Blog</a>
             <a href="pages/case-studies.html" class="dropdown-link">📂 Case Studies</a>
             <a href="pages/success-stories.html" class="dropdown-link">🌟 Success Stories</a>
             <a href="pages/video-tutorials.html" class="dropdown-link">🎬 Video Tutorials</a>
@@ -289,7 +289,7 @@
             Resources <span class="mobile-chevron">▾</span>
           </button>
           <ul class="mobile-sub">
-            <li><a href="#blog">Blog</a></li>
+            <li><a href="pages/blog.html">Blog</a></li>
             <li><a href="pages/case-studies.html">Case Studies</a></li>
             <li><a href="pages/success-stories.html">Success Stories</a></li>
             <li><a href="pages/video-tutorials.html">Video Tutorials</a></li>
@@ -914,7 +914,7 @@
           </div>
           <h3 class="blog-title">How Coaching Institutes Can Double Student Enrollments in 2026</h3>
           <p class="blog-excerpt">Discover how digitizing test series, offering mobile app access, and automated WhatsApp updates can transform student acquisition for local coaching centers.</p>
-          <button class="nb-button nb-button-white blog-read-btn" data-blog="1">Read Article &rarr;</button>
+          <a href="pages/blog-article.html?id=1" class="nb-button nb-button-white blog-read-btn">Read Article &rarr;</a>
         </article>
 
         <!-- Blog 2 -->
@@ -925,7 +925,7 @@
           </div>
           <h3 class="blog-title">5 Bulletproof Ways to Prevent Video Piracy & Screen Recording</h3>
           <p class="blog-excerpt">Protect your paid video lectures and test series from illegal Telegram leaks using dynamic watermarking and AES-128 hardware-bound DRM encryption.</p>
-          <button class="nb-button nb-button-dark blog-read-btn" data-blog="2">Read Article &rarr;</button>
+          <a href="pages/blog-article.html?id=2" class="nb-button nb-button-dark blog-read-btn">Read Article &rarr;</a>
         </article>
 
         <!-- Blog 3 -->
@@ -936,7 +936,7 @@
           </div>
           <h3 class="blog-title">Why Having Your Own Branded App Outperforms 3rd-Party Marketplaces</h3>
           <p class="blog-excerpt">Stop paying 30% platform commissions. Learn why owning a white-labeled iOS and Android app builds lifetime brand equity and higher student retention.</p>
-          <button class="nb-button nb-button-white blog-read-btn" data-blog="3">Read Article &rarr;</button>
+          <a href="pages/blog-article.html?id=3" class="nb-button nb-button-white blog-read-btn">Read Article &rarr;</a>
         </article>
 
         <!-- Blog 4 -->
@@ -947,31 +947,17 @@
           </div>
           <h3 class="blog-title">Building a Recurring Subscription Model for E-books & Test Series</h3>
           <p class="blog-excerpt">A step-by-step framework for educators to generate stable monthly recurring revenue (MRR) by bundling digital notes, live mocks, and Q&A sessions.</p>
-          <button class="nb-button nb-button-dark blog-read-btn" data-blog="4">Read Article &rarr;</button>
+          <a href="pages/blog-article.html?id=4" class="nb-button nb-button-dark blog-read-btn">Read Article &rarr;</a>
         </article>
+      </div>
+
+      <div style="margin-top: 50px; text-align: center;">
+        <a href="pages/blog.html" class="nb-button nb-button-dark" style="padding: 16px 40px; font-size: 1.1rem; box-shadow: 4px 4px 0px #000;">More Articles &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- Full Blog Reader Modal -->
-  <div class="blog-modal-overlay" id="blog-modal">
-    <div class="nb-card blog-modal-card">
-      <button class="blog-modal-close" id="blog-modal-close" aria-label="Close Blog">&times;</button>
-      <div class="blog-modal-header">
-        <span class="blog-tag" id="modal-blog-tag">Coaching Growth</span>
-        <span class="blog-date" id="modal-blog-date">July 24, 2026</span>
-      </div>
-      <h2 class="blog-modal-title" id="modal-blog-title">Article Title</h2>
-      <div class="blog-modal-body" id="modal-blog-body">
-        <!-- Blog content injected dynamically -->
-      </div>
-      <div style="margin-top: 30px; text-align: center; border-top: 2px dashed #000; padding-top: 20px;">
-        <a href="https://wa.me/919144191440?text=Hi%20Padho%20Team!%20I%20read%20your%20blog%20and%20want%20to%20know%20more%20about%20building%20my%20coaching%20app." target="_blank" rel="noopener noreferrer" class="nb-button nb-button-green" style="display:inline-flex; align-items:center; gap:8px;">
-          💬 Chat on WhatsApp (+91 9144191440)
-        </a>
-      </div>
-    </div>
-  </div>
+
 
   <!-- Floating WhatsApp Chatbot Widget -->
   <div class="whatsapp-chatbot-widget" id="whatsapp-chatbot-widget">
@@ -1048,6 +1034,7 @@
     </div>
   </footer>
 
+  <script src="blog-data.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

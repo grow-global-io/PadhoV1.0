@@ -3,96 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Padho | Finance & Fee Management</title>
+  <title>Padho | Blog - Insights & Resources</title>
+  <meta name="description" content="Proven strategies, growth playbooks, and tech guides to help coaching centers and online educators scale effortlessly.">
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/png" href="../logo.png">
   <style>
-    /* Styling adjustments for page-specific grids */
-    .feature-detail-grid {
+    /* Blog Page Specific Styling */
+    .blog-filter-container {
+      margin-top: -30px;
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .blog-search-bar {
+      display: flex;
+      border: 3px solid #000;
+      border-radius: 50px;
+      background: #fff;
+      padding: 6px 16px;
+      box-shadow: 4px 4px 0 #000;
+      max-width: 500px;
+      width: 100%;
+      margin: 0 auto;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .blog-search-bar input {
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 1.05rem;
+      font-family: var(--font-body);
+      font-weight: 500;
+      padding: 8px 0;
+    }
+
+    .blog-search-bar svg {
+      color: #000;
+      flex-shrink: 0;
+    }
+
+    .category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .category-pill {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 0.9rem;
+      padding: 8px 18px;
+      border: 2.5px solid #000;
+      border-radius: 50px;
+      background: #fff;
+      color: #000;
+      cursor: pointer;
+      box-shadow: 2px 2px 0 #000;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    }
+
+    .category-pill:hover, .category-pill.active {
+      transform: translate(-1px, -1px);
+      box-shadow: 3px 3px 0 #000;
+    }
+
+    .category-pill.active {
+      background: var(--primary-yellow);
+    }
+
+    .blog-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 32px;
-      margin-top: 50px;
+      margin-bottom: 60px;
     }
+
     @media (max-width: 768px) {
-      .feature-detail-grid { grid-template-columns: 1fr; }
+      .blog-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
     }
-    .detail-card {
+
+    .no-results-card {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 40px;
       background: #fff;
       border: 3px solid #000;
-      border-radius: 16px;
-      padding: 32px;
-      box-shadow: 6px 6px 0px #000;
-      transition: transform 0.25s ease;
+      border-radius: 20px;
+      box-shadow: 6px 6px 0 #000;
     }
-    .detail-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 8px 8px 0px #000;
+
+    .no-results-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
     }
-    .detail-card-icon {
-      width: 52px;
-      height: 52px;
-      background: var(--primary-yellow);
-      border: 2px solid #000;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      margin-bottom: 18px;
-      box-shadow: 3px 3px 0px #000;
-    }
-    .detail-card-title {
-      font-family: var(--font-heading);
-      font-size: 1.35rem;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-    .detail-card-text {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #444;
+
+    .no-results-card p {
+      font-size: 1rem;
+      color: #555;
       font-weight: 500;
-    }
-    .workflow-section {
-      padding: 80px 0;
-      background: #fff;
-      border-bottom: 3px solid #000;
-    }
-    .workflow-steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 40px;
-    }
-    @media (max-width: 768px) {
-      .workflow-steps { grid-template-columns: 1fr; }
-    }
-    .step-box {
-      border: 3px solid #000;
-      border-radius: 16px;
-      padding: 24px;
-      background: var(--bg-light);
-      box-shadow: 5px 5px 0px #000;
-      position: relative;
-    }
-    .step-num {
-      position: absolute;
-      top: -16px;
-      left: 20px;
-      background: #000;
-      color: #fff;
-      font-family: var(--font-heading);
-      font-weight: 800;
-      padding: 2px 10px;
-      border-radius: 6px;
-      font-size: 0.85rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- MAIN NAVIGATION -->
+  <!-- ============================================================
+       MAIN NAVIGATION
+  ============================================================ -->
   <header id="main-header">
     <nav class="nav-container">
 
@@ -103,8 +128,6 @@
 
       <!-- Desktop Nav Links -->
       <ul class="nav-links" id="nav-links">
-
-        <!-- HOME (plain link) -->
         <li class="nav-item">
           <a href="../index.html" class="nav-link">Home</a>
         </li>
@@ -270,7 +293,6 @@
             <a href="https://wa.me/919144191440?text=Hi%20Padho!%20I%20want%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer" class="dropdown-link">📬 Contact</a>
           </div>
         </li>
-
       </ul>
 
       <!-- Right-side Auth CTAs -->
@@ -401,8 +423,8 @@
   <!-- Mobile Overlay -->
   <div class="mobile-overlay" id="mobile-overlay"></div>
 
-  <!-- Hero Section (Matches home page hero) -->
-  <section class="hero-section grid-overlay" style="padding: 160px 0 100px 0;">
+  <!-- Hero Section -->
+  <section class="hero-section grid-overlay" style="padding: 160px 0 100px 0; border-bottom: 3px solid #000;">
     <!-- SVGs Sparkles and Doodles -->
     <svg class="doodle-sparkle-1" width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2L12 0Z" fill="currentColor"></path>
@@ -414,107 +436,54 @@
       <path d="M10 25C10 15 20 10 30 15C40 20 42 35 30 40C18 45 8 30 15 20" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"></path>
     </svg>
 
-    <div class="container hero-content">
+    <div class="container hero-content" style="text-align: center;">
       <div class="trust-badge-group">
-        <span class="trust-text" style="text-transform: uppercase; letter-spacing: 0.1em;">Operations</span>
+        <span class="trust-text" style="text-transform: uppercase; letter-spacing: 0.1em; background: var(--accent-green);">Latest Insights</span>
       </div>
 
       <h1 class="hero-title" style="font-size: clamp(2.2rem, 8vw, 3.8rem); margin-bottom: 24px; line-height: 1.1;">
-        <span>Finance & Fee Management</span>
+        Knowledge <span style="background: var(--primary-yellow); padding: 2px 12px; border: 3px solid #000; border-radius: 10px; box-shadow: 4px 4px 0px #000; display: inline-block;">Hub</span>
       </h1>
 
-      <p style="font-size: clamp(1rem, 4vw, 1.25rem); font-weight: 600; max-width: 720px; margin: 0 auto 40px auto; line-height: 1.6; color: #000;">
-        Automate fee schedules, invoices, late warnings, and direct settlements to your bank account.
+      <p style="font-size: clamp(1rem, 4vw, 1.2rem); font-weight: 600; max-width: 680px; margin: 0 auto; line-height: 1.6; color: rgba(0,0,0,0.75);">
+        Proven strategies, growth playbooks, and tech guides to help coaching centers and online educators scale effortlessly.
       </p>
-
-      <div class="hero-actions" style="margin-bottom: 0;">
-        <a href="https://calendar.app.google/VQ18n3Bwirs8ux3M8" target="_blank" rel="noopener noreferrer" class="nb-button nb-button-dark">Schedule a Demo</a>
-        <a href="https://wa.me/919144191440?text=Hi%20Padho!%20I%20want%20to%20know%20more%20about%20Finance%20%26%20Fee%20Management." target="_blank" rel="noopener noreferrer" class="nb-button nb-button-white" style="background:#25D366; color:#fff; border-color:#000;">💬 Chat on WhatsApp</a>
-      </div>
     </div>
   </section>
 
-  <!-- Key Capabilities Grid -->
-  <section style="padding: 80px 0; background: var(--bg-light); border-bottom: 3px solid #000;">
+  <!-- Blog Listing & Filtering Section -->
+  <section style="padding: 80px 0; background: var(--bg-light); min-height: 50vh;">
     <div class="container">
-      <div class="section-header" style="text-align: center;">
-        <span class="section-tag">Key Insights</span>
-        <h2 class="section-title">Designed for Success</h2>
-      </div>
-
-      <div class="feature-detail-grid">
+      
+      <!-- Filter Controls -->
+      <div class="blog-filter-container">
+        <div class="blog-search-bar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="blog-search" placeholder="Search articles...">
+        </div>
         
-        <div class="detail-card">
-          <div class="detail-card-icon">💰</div>
-          <h3 class="detail-card-title">Split Installment Plans</h3>
-          <p class="detail-card-text">Custom fee structures allowing single-shot payments or flexible monthly plans.</p>
+        <div class="category-pills" id="category-pills">
+          <button class="category-pill active" data-category="All">All Topics</button>
+          <button class="category-pill" data-category="Coaching Growth">Coaching Growth</button>
+          <button class="category-pill" data-category="Content Security">Content Security</button>
+          <button class="category-pill" data-category="App Strategy">App Strategy</button>
+          <button class="category-pill" data-category="Monetization">Monetization</button>
         </div>
-  
-        <div class="detail-card">
-          <div class="detail-card-icon">📄</div>
-          <h3 class="detail-card-title">Automated GST Invoices</h3>
-          <p class="detail-card-text">Generate professional invoices, tax details, and transaction receipts.</p>
-        </div>
-  
-        <div class="detail-card">
-          <div class="detail-card-icon">🚨</div>
-          <h3 class="detail-card-title">Late Fee Warnings</h3>
-          <p class="detail-card-text">Configure automated WhatsApp reminders and payment links for pending dues.</p>
-        </div>
-  
-        <div class="detail-card">
-          <div class="detail-card-icon">💳</div>
-          <h3 class="detail-card-title">Multi-Gateway Support</h3>
-          <p class="detail-card-text">Integrated payment options across Razorpay, Cashfree, Stripe, and UPI.</p>
-        </div>
-  
-      </div>
-    </div>
-  </section>
-
-  <!-- See How It Works Video Walkthrough Section -->
-  <section class="video-walkthrough-section" style="padding: 80px 0; background: #fff; border-bottom: 3px solid #000; text-align: center;">
-    <div class="container">
-      <div class="section-header" style="margin-bottom: 40px;">
-        <span class="section-tag" style="background: var(--accent-purple); color: #000; padding: 4px 12px; border: 2px solid #000; border-radius: 20px; font-weight: 800; font-size: 0.85rem; box-shadow: 2px 2px 0 #000; display: inline-block; margin-bottom: 12px;">Demo Tour</span>
-        <h2 class="section-title" style="font-size: 2.5rem; margin-top: 10px;">See How It Works</h2>
-        <p style="font-size: 1.1rem; color: #555; max-width: 600px; margin: 12px auto 0 auto; font-weight: 500;">Watch our product walkthrough playlist to see how easy it is to customize and scale your platform.</p>
       </div>
 
-      <div class="video-container" style="max-width: 800px; margin: 0 auto 40px auto; border: 3px solid #000; border-radius: 24px; overflow: hidden; box-shadow: 8px 8px 0px #000; position: relative; aspect-ratio: 16/9; background: #121212;">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?list=PLPLACEHOLDER" title="Product Walkthrough Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border: 0; display: block;"></iframe>
+      <!-- Blog Grid (Dynamic Injection fallback with static placeholders) -->
+      <div class="blog-grid" id="blog-list-grid">
+        <!-- Will be populated by JS, default placeholders included for no-JS environments -->
       </div>
 
-      <div class="video-actions">
-        <a href="https://calendar.app.google/VQ18n3Bwirs8ux3M8" target="_blank" rel="noopener noreferrer" class="nb-button nb-button-dark" style="padding: 16px 36px; font-size: 1.1rem;">🗓️ Schedule a Live Demo</a>
+      <!-- Load More Button Container -->
+      <div id="load-more-container" style="text-align: center; margin-top: 40px; margin-bottom: 20px; display: none;">
+        <button id="load-more-btn" class="nb-button nb-button-dark" style="padding: 14px 40px; box-shadow: 4px 4px 0px #000; cursor: pointer;">More Articles &rarr;</button>
       </div>
-    </div>
-  </section>
 
-  <!-- Workflow Breakdown -->
-  <section class="workflow-section">
-    <div class="container">
-      <div class="section-header" style="text-align: center;">
-        <span class="section-tag">Simple 3-Step Setup</span>
-        <h2 class="section-title">How It Works</h2>
-      </div>
-      <div class="workflow-steps">
-        <div class="step-box">
-          <span class="step-num">STEP 01</span>
-          <h4 style="font-family:var(--font-heading); font-size:1.2rem; margin: 12px 0 8px 0;">Configure System</h4>
-          <p style="font-size:0.9rem; color:#555; margin:0;">Set up your parameters and customization rules in under 2 minutes from your dashboard.</p>
-        </div>
-        <div class="step-box">
-          <span class="step-num">STEP 02</span>
-          <h4 style="font-family:var(--font-heading); font-size:1.2rem; margin: 12px 0 8px 0;">Automate & Share</h4>
-          <p style="font-size:0.9rem; color:#555; margin:0;">Publish updates directly to your web platform for instant access by teachers & students.</p>
-        </div>
-        <div class="step-box">
-          <span class="step-num">STEP 03</span>
-          <h4 style="font-family:var(--font-heading); font-size:1.2rem; margin: 12px 0 8px 0;">Track Analytics</h4>
-          <p style="font-size:0.9rem; color:#555; margin:0;">Monitor real-time engagement and growth metrics with visual dashboards.</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -561,6 +530,101 @@
     </a>
   </div>
 
+  <script src="../blog-data.js"></script>
   <script src="../script.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('blog-search');
+      const categoryPills = document.querySelectorAll('.category-pill');
+      const blogGrid = document.getElementById('blog-list-grid');
+      
+      let currentCategory = 'All';
+      let searchQuery = '';
+      let visibleCount = 6;
+
+      function renderBlogs() {
+        blogGrid.innerHTML = '';
+        
+        // Convert blogPosts object into an array
+        const postsArray = Object.values(blogPosts);
+        
+        const filteredPosts = postsArray.filter(post => {
+          const matchesCategory = currentCategory === 'All' || post.tag === currentCategory;
+          const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                post.tag.toLowerCase().includes(searchQuery.toLowerCase());
+          return matchesCategory && matchesSearch;
+        });
+
+        if (filteredPosts.length === 0) {
+          blogGrid.innerHTML = `
+            <div class="no-results-card">
+              <h3>🔍 No articles found</h3>
+              <p>Try refining your search terms or selecting a different topic category.</p>
+            </div>
+          `;
+          document.getElementById('load-more-container').style.display = 'none';
+          return;
+        }
+
+        // Slice to current pagination limit
+        const slicedPosts = filteredPosts.slice(0, visibleCount);
+
+        slicedPosts.forEach(post => {
+          const card = document.createElement('article');
+          card.className = 'nb-card blog-card';
+          card.style.backgroundColor = post.bgColor;
+          
+          card.innerHTML = `
+            <div class="blog-card-meta">
+              <span class="blog-tag">${post.tag}</span>
+              <span class="blog-date">${post.date}</span>
+            </div>
+            <h3 class="blog-title">${post.title}</h3>
+            <p class="blog-excerpt">${post.excerpt}</p>
+            <a href="blog-article.html?id=${post.id}" class="nb-button ${post.btnClass} blog-read-btn">Read Article &rarr;</a>
+          `;
+          
+          blogGrid.appendChild(card);
+        });
+
+        // Manage Load More button visibility
+        const loadMoreContainer = document.getElementById('load-more-container');
+        if (filteredPosts.length > visibleCount) {
+          loadMoreContainer.style.display = 'block';
+        } else {
+          loadMoreContainer.style.display = 'none';
+        }
+      }
+
+      // Load More Button Event Click
+      document.getElementById('load-more-btn').addEventListener('click', () => {
+        visibleCount += 6;
+        renderBlogs();
+      });
+
+      // Filter category on pill click
+      categoryPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          categoryPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          currentCategory = pill.getAttribute('data-category');
+          visibleCount = 6; // Reset visible count on filter
+          renderBlogs();
+        });
+      });
+
+      // Filter on search input
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        visibleCount = 6; // Reset visible count on search
+        renderBlogs();
+      });
+
+      // Initial Render
+      renderBlogs();
+    });
+  </script>
 </body>
 </html>
