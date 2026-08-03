@@ -230,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 32px;
-  height: 68px;
+  height: 96px;
   display: flex;
   align-items: center;
   gap: 0;
@@ -257,7 +257,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-logo-img {
-  height: 44px;
+  height: 88px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-backdrop {
   position: fixed;
   inset: 0;
-  top: 68px;
+  top: 96px;
   background-color: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
   z-index: 998;
@@ -426,7 +426,7 @@ h1, h2, h3, h4, h5, h6 {
   /* position:fixed so it is anchored to the viewport,
      NOT to any CSS containing block. JS sets left dynamically. */
   position: fixed;
-  top: 72px;             /* just below the 68px header */
+  top: 100px;             /* just below the 96px header */
   left: 0;               /* overridden by JS */
   min-width: 240px;
   background-color: #ffffff;
@@ -487,7 +487,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ---- Mega Panels ---- */
 .mega-panel {
   position: fixed;
-  top: 68px; /* header height */
+  top: 96px; /* header height */
   left: 0;
   right: 0;
   background-color: #ffffff;
@@ -1923,7 +1923,7 @@ body {
   font-size: 1.1rem;
   color: var(--text-dark);
   box-shadow: 2px 2px 0px var(--border-color);
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
   position: relative;
   z-index: 5;
   cursor: pointer;
@@ -1937,7 +1937,21 @@ body {
 .social-circle:hover {
   transform: translate(-1px, -1px);
   box-shadow: 3px 3px 0px var(--border-color);
-  background-color: var(--primary-yellow);
+}
+
+.social-circle[aria-label="Facebook"]:hover {
+  background-color: #1877F2;
+  color: #fff;
+}
+
+.social-circle[aria-label="Instagram"]:hover {
+  background-color: #E1306C;
+  color: #fff;
+}
+
+.social-circle[aria-label="YouTube"]:hover {
+  background-color: #FF0000;
+  color: #fff;
 }
 
 /* ==================================
@@ -2334,6 +2348,21 @@ body {
 }
 
 @media (max-width: 768px) {
+  .nav-container {
+    height: 68px;
+  }
+  .nav-logo-img {
+    height: 44px;
+  }
+  .nav-backdrop {
+    top: 68px;
+  }
+  .mega-panel {
+    top: 68px;
+  }
+  .dropdown-panel {
+    top: 72px;
+  }
   .hero-title {
     font-size: clamp(2rem, 8vw, 3rem);
   }
